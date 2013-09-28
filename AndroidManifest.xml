@@ -23,9 +23,17 @@
             </intent-filter>
         </activity>
         <!-- base control start -->
-        <!-- ScrollableTabHost start -->
-        
-        <!-- ScrollableTabHost end -->
+        <activity android:name=".basecontrol.BaseControlMainActivity" android:screenOrientation="portrait"></activity>
+        	<!-- ScrollableTabHost start -->
+        	<activity android:name=".basecontrol.SrollableTabHost.ProjectList" android:screenOrientation="portrait"></activity><!-- 一级目录 -->
+        	<activity android:name=".basecontrol.SrollableTabHost.DemoList_ScrollableTabHost" android:screenOrientation="portrait"></activity><!-- 二级目录 -->
+        	<activity android:name=".basecontrol.SrollableTabHost.Demo_ScrollableTabHost" android:screenOrientation="portrait"></activity><!-- 例子样式1 -->
+        	<activity android:name=".basecontrol.SrollableTabHost.Demo_ScrollableTabHost2" android:screenOrientation="portrait"></activity><!-- 例子样式2 -->
+        	<activity android:name=".basecontrol.SrollableTabHost.Demo_ScrollableTabHost3" android:screenOrientation="portrait"></activity><!-- 例子样式3 -->
+        	<activity android:name=".basecontrol.SrollableTabHost.Demo_ScrollableTabHost4" android:screenOrientation="portrait"></activity><!-- 例子样式4 -->
+        	<activity android:name=".basecontrol.SrollableTabHost.DemoActivity1" android:screenOrientation="portrait"></activity><!-- 例子中的activity1 -->
+        	<activity android:name=".basecontrol.SrollableTabHost.DemoActivity2" android:screenOrientation="portrait"></activity><!-- 例子中的activity2 -->
+        	<!-- ScrollableTabHost end -->
         <!-- base control end -->
     </application>
 
