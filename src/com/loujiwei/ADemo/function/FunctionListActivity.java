@@ -1,22 +1,27 @@
-package com.loujiwei.ADemo.basecontrol;
+package com.loujiwei.ADemo.function;
 
 import java.util.ArrayList;
 
 import com.loujiwei.ADemo.R;
 import com.loujiwei.ADemo.Adapter.MainListAdapter;
 import com.loujiwei.ADemo.basecontrol.SrollableTabHost.IntentObject;
-import com.loujiwei.ADemo.basecontrol.SrollableTabHost.ProjectList;
+import com.loujiwei.common.activity.LJWBaseActivity;
 
-import android.os.Bundle;
-import android.app.Activity;
 import android.content.Intent;
-import android.view.Menu;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 
-public class BaseControlMainActivity extends Activity {
+/**
+ * 
+ * @author Lou Jiwei
+ * @email kkooff114@gmail.com
+ * @create 2013-10-5 下午4:18:42
+ * 
+ */
+public class FunctionListActivity extends LJWBaseActivity {
 
 	private ArrayList intentsArray;
 	private ListView listView;
@@ -30,13 +35,12 @@ public class BaseControlMainActivity extends Activity {
 
 		// 添加目录
 		intentsArray = new ArrayList();
-		// SrollableTabHost
-		IntentObject SrollableTabHost = new IntentObject();
-		SrollableTabHost.title = "SrollableTabHost";
-		SrollableTabHost.description = "基础布局控件";
-		SrollableTabHost.intent = new Intent(this,
-				ProjectList.class);
-		intentsArray.add(SrollableTabHost);
+		// 获取图片,相机相册
+		IntentObject PhotoActivity = new IntentObject();
+		PhotoActivity.title = "相机相册";
+		PhotoActivity.description = "从相机相册中获取图片";
+		PhotoActivity.intent = new Intent(this, PhotoActivity.class);
+		intentsArray.add(PhotoActivity);
 
 		listView.setAdapter(new MainListAdapter(this, intentsArray));
 		listView.setOnItemClickListener(new OnItemClickListener() {
@@ -48,13 +52,6 @@ public class BaseControlMainActivity extends Activity {
 				startActivity(intent);
 			}
 		});
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
 	}
 
 }

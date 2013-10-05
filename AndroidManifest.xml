@@ -7,6 +7,14 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -35,6 +43,13 @@
         	<activity android:name=".basecontrol.SrollableTabHost.DemoActivity2" android:screenOrientation="portrait"></activity><!-- 例子中的activity2 -->
         	<!-- ScrollableTabHost end -->
         <!-- base control end -->
+        <!-- base function list start -->
+        <activity android:name=".function.FunctionListActivity" android:screenOrientation="portrait"></activity><!-- 功能目录 -->
+        	<!-- function take photo start -->
+        	<activity android:name=".function.PhotoActivity" android:screenOrientation="portrait"></activity><!-- 获取照片 -->
+        	<activity android:name="com.loujiwei.common.activity.TakePhotoActivity" android:screenOrientation="portrait" android:theme="@style/MyDialogStyleBottom"></activity><!-- 获取照片 -->
+        	<!-- function take photo end -->
+        <!-- base function list end -->
     </application>
 
 </manifest>

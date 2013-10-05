@@ -1,4 +1,4 @@
-package com.loujiwei.Adapter;
+package com.loujiwei.ADemo.Adapter;
 
 import java.util.ArrayList;
 import java.util.List;

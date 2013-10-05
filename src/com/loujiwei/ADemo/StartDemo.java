@@ -9,9 +9,10 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
+import com.loujiwei.ADemo.Adapter.MainListAdapter;
 import com.loujiwei.ADemo.basecontrol.BaseControlMainActivity;
 import com.loujiwei.ADemo.basecontrol.SrollableTabHost.IntentObject;
-import com.loujiwei.Adapter.MainListAdapter;
+import com.loujiwei.ADemo.function.FunctionListActivity;
 import com.loujiwei.common.activity.LJWBaseActivity;
 
 /**
@@ -39,6 +40,13 @@ public class StartDemo extends LJWBaseActivity{
         BaseControlMainActivity.description = "基础布局控件";
         BaseControlMainActivity.intent = new Intent(this, BaseControlMainActivity.class);
         intentsArray.add(BaseControlMainActivity);
+        
+        //功能清单
+        IntentObject FunctionListActivity=new IntentObject();
+        FunctionListActivity.title="功能清单";
+        FunctionListActivity.description="一些功能的演示";
+        FunctionListActivity.intent=new Intent(this, FunctionListActivity.class);
+        intentsArray.add(FunctionListActivity);
         
         listView.setAdapter(new MainListAdapter(this, intentsArray));
 		listView.setOnItemClickListener(new OnItemClickListener() {
