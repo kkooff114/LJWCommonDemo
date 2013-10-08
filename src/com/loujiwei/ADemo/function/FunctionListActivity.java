@@ -41,6 +41,13 @@ public class FunctionListActivity extends LJWBaseActivity {
 		PhotoActivity.description = "从相机相册中获取图片";
 		PhotoActivity.intent = new Intent(this, PhotoActivity.class);
 		intentsArray.add(PhotoActivity);
+		
+		//定制日期选择器,只显示年, (或)月, (或)日
+		IntentObject customerDataPickerDialog=new IntentObject();
+		customerDataPickerDialog.title="定制日期选择器";
+		customerDataPickerDialog.description="定制日期选择器,只显示年, (或)月, (或)日";
+		customerDataPickerDialog.intent=new Intent(this, CustomDataPickerDialogActivity.class);
+		intentsArray.add(customerDataPickerDialog);
 
 		listView.setAdapter(new MainListAdapter(this, intentsArray));
 		listView.setOnItemClickListener(new OnItemClickListener() {

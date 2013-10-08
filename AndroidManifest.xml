@@ -49,6 +49,9 @@
         	<activity android:name=".function.PhotoActivity" android:screenOrientation="portrait"></activity><!-- 获取照片 -->
         	<activity android:name="com.loujiwei.common.activity.TakePhotoActivity" android:screenOrientation="portrait" android:theme="@style/MyDialogStyleBottom"></activity><!-- 获取照片 -->
         	<!-- function take photo end -->
+        	<!-- dataPicker start -->
+        	<activity android:name=".function.CustomDataPickerDialogActivity" android:screenOrientation="portrait"></activity><!-- 定制日期选择器 -->
+        	<!-- dataPicker end -->
         <!-- base function list end -->
     </application>
 
