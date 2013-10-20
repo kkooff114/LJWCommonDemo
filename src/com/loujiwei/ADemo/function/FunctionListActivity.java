@@ -48,6 +48,13 @@ public class FunctionListActivity extends LJWBaseActivity {
 		customerDataPickerDialog.description="定制日期选择器,只显示年, (或)月, (或)日";
 		customerDataPickerDialog.intent=new Intent(this, CustomDataPickerDialogActivity.class);
 		intentsArray.add(customerDataPickerDialog);
+		
+		//Google Map
+		IntentObject googleMap=new IntentObject();
+		googleMap.title="google地图";
+		googleMap.description="google地图的接口使用";
+		googleMap.intent=new Intent(this, GoogleMapActivity.class);
+		intentsArray.add(googleMap);
 
 		listView.setAdapter(new MainListAdapter(this, intentsArray));
 		listView.setOnItemClickListener(new OnItemClickListener() {
